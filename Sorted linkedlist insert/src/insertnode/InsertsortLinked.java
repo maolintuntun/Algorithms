@@ -1,8 +1,8 @@
 package insertnode;
 
-class Test {          //Ğ´Õâ¸ö²âÊÔ»¨ÁËºÜ¾Ã
+class Test {          //å†™è¿™ä¸ªæµ‹è¯•èŠ±äº†å¾ˆä¹…
 	public static void main(String[] args){
-		int[] array = {2,4,6,8,10};   //ÓÃÕâ¸ö°ì·¨Éú³ÉÁ´±íµÄ·½Ê½ÖµµÃ¼ÇÒä
+		int[] array = {2,4,6,8,10};                //ç”¨è¿™ä¸ªåŠæ³•ç”Ÿæˆé“¾è¡¨çš„æ–¹å¼å€¼å¾—è®°å¿†
 		ListNode head = new ListNode(array[0]);
 		ListNode cur = head;
 		for(int i = 1; i < array.length; i++){
@@ -10,11 +10,11 @@ class Test {          //Ğ´Õâ¸ö²âÊÔ»¨ÁËºÜ¾Ã
 			cur  = cur.next;
 		}
 		InsertsortLinked sol = new InsertsortLinked();
-		ListNode newhead = sol.insert(head, 11); //why define this "newhead" instead of 
+		ListNode newhead = sol.insert(head, 11);   //why define this "newhead" instead of 
 		cur = newhead;                            //write cur = head? because head has 
-		                            //been changed,we need a bowl to receive the result(a head node) returned from below
+		                                //been changed,we need a bowl to receive the result(a head node) returned from below
 		
-		while(cur != null){            //Notice how to print a Linkedlist ! not "print£¨head£©"
+		while(cur != null){            //Notice how to print a Linkedlist ! not "printï¼ˆheadï¼‰"
 			System.out.print(cur.value + " ");
 			cur = cur.next;
 		}
@@ -32,7 +32,7 @@ class ListNode{
 }
 
 public class InsertsortLinked {
-	public ListNode insert(ListNode head, int value) { //method name type?Ğ¡Ğ´¿ªÍ·£¬Ã¿¸öµ¥´ÊÊ××ÖÄ¸´óĞ´£¬ÍÕ·åÃüÃû
+	public ListNode insert(ListNode head, int value) { //method name type?å°å†™å¼€å¤´ï¼Œæ¯ä¸ªå•è¯é¦–å­—æ¯å¤§å†™ï¼Œé©¼å³°å‘½å
 		ListNode newNode = new ListNode(value);
 		//1.determine if the inserted node is before head.
 		if (head == null || head.value >= value){
