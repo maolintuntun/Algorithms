@@ -12,7 +12,7 @@
   base case: 链表可能很长，到最后只有一个node的情况
   
 4.subproblem 是什么
-   4→3→2→null
+  站在node1这一层，subproblem就是拿到下一层反转好的链表 4→3→2→null
 
 
 public class ReverseLinked{
@@ -23,8 +23,8 @@ public class ReverseLinked{
 		}
     
 		ListNode newhead = reverse(head.next);  //先去叫下一层，下一层能把 4→3→2→null这个小结果返回给我
-		head.next.next = head; 
-		head.next = null;
+		head.next.next = head;  // head.next是2 ，2的下一个指向1
+		head.next = null;  // 1指向null
 		return newhead;
 	}
 
