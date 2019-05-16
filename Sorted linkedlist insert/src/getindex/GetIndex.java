@@ -1,3 +1,6 @@
+
+//将链表中对应index的这个元素拿出
+
 package getindex;
 
 class Teeest{
@@ -27,13 +30,13 @@ class ListNode{
 	
 }
 
-
+//***************************************************************************
 public class GetIndex {
 	public ListNode get(ListNode head, int index){
-		while (index > 0 && head != null){
+		while (index > 0 && head != null){    //****index =0 找到了这个元素 head == null 链表不够长 
 			head = head.next;
 			index--;
-		} // index <= 0 (found) or head == null(list is not long enough)
-	   return head;
+		}                      // index <= 0 (found) or head == null(list is not long enough)
+	   return head;         //把找到的这个节点返回
 	}
 }
