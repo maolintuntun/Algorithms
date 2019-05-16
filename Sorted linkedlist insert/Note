@@ -1,0 +1,24 @@
+When using Eclipse,
+New 
+    project -
+    package - 1、选择有意义的名字，能快速地传达该类的用途。2、所有包的命名必须采用小写英文字母。
+    class -   参照java驼峰命名法，类名的首字母必须采用大写的形式，每个词的首字母必须采用大写。如：StudentAnswer.java
+    method -  小写开头，每个单词首字母大写，驼峰命名
+*****************************************************************8    
+1.If nothing is printed after clicked Run, maybe I forget add the System.out.println
+
+2.How to print a Linkedlist?
+
+3.How to generate a Linkedlist with known value?
+
+4. Two Case:
+   1) insert value put ahead
+       if....
+   2) insert between the list or  to the tail
+      while 
+      prev prev.next
+
+
+
+
+    

@@ -1,0 +1,31 @@
+1.如何理解递归 数学归纳法 如果这个逻辑对当前层成立，则对下面所有层都成立
+   当head = 1时，返回的是 4→3→2→1←0 newhead =4，
+   当head = 0时，返回的是 4→3→2→1→0 newhead 还应该是4，返回的这个newhead会在下一轮recurse再用到
+   
+2.newhead是什么  
+    一直都是4
+    当前层为1时， 处理head = 1时，进行reverse(2) 2是head.next,
+   拿的这个newhead是4，是一个局部完全反转好的链表 4→3→2→null，因为 0→1→2←3←4 1到2这个箭头没机会反向
+                                                                   ↓
+3.difference between corner case and base case 
+  corner case: linkedlist是空的 or 只有1个node
+  base case: 链表可能很长，到最后只有一个node的情况
+  
+4.subproblem 是什么
+  站在node1这一层，subproblem就是拿到下一层反转好的链表 4→3→2→null
+
+
+public class ReverseLinked{
+	public ListNode reverse(ListNode head){
+		
+		if( head == null || head.next == null){  //没有node，只有1个node
+			return head;
+		}
+    
+		ListNode newhead = reverse(head.next);  //先去叫下一层，下一层能把 4→3→2→null这个小结果返回给我
+		head.next.next = head;  // head.next是2 ，2的下一个指向1
+		head.next = null;  // 1指向null
+		return newhead;
+	}
+
+}
