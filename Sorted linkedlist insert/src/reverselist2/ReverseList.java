@@ -39,12 +39,12 @@ public class ReverseList {
 		ListNode cur = head;
 		ListNode pre = null;
 		while( cur != null ){              //important how to write this loop
-			ListNode next = cur.next;
+			ListNode next = cur.next;     //store the next node
 			cur.next = pre;
 			
 			pre = cur;
-			cur = next;  // why not cur = cur.next?
-			
+			cur = next;  // why not cur = cur.next? because you must store the next first and next 
+			            // second the next node will lost connection with current(cur point to pre)
 		}
 		return pre;
 	}
