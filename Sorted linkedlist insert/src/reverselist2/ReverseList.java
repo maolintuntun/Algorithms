@@ -38,7 +38,7 @@ public class ReverseList {
 		}
 		ListNode cur = head;
 		ListNode pre = null;
-		while( cur != null ){              //important how to write this loop
+		while( cur != null ){              //****important how to write this loop*** what happened
 			ListNode next = cur.next;     //store the next node
 			cur.next = pre;
 			
