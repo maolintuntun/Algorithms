@@ -30,8 +30,8 @@ class ListNode{
 public class length {  //class name not standard
 	public int getlength(ListNode head){
 		int linkedlistSize = 0;
-		ListNode curr = head;   //不要命名为dummy
-		while (curr != null){   //停在链表最后一个节点的后面 在null上。
+		ListNode curr = head;   //涓嶈鍛藉悕涓篸ummy
+		while (curr != null){   //鍋滃湪閾捐〃鏈�鍚庝竴涓妭鐐圭殑鍚庨潰 鍦╪ull涓娿��
 			curr = curr.next;
 			linkedlistSize++;
 		}
