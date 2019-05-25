@@ -1,4 +1,5 @@
-current.next = next //dereference 是拿着名片找到object
+current.next = next 
+//dereference 是拿着名片找到object
 
 加了一个连接的逻辑 
 发生在heap里的操作  真的改变了整个链表的结构
