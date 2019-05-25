@@ -1,0 +1,20 @@
+current.next = next //dereference 是拿着名片找到object
+
+加了一个连接的逻辑 
+发生在heap里的操作  真的改变了整个链表的结构
+
+
+ListNode currrent = null //表示这张名片是空的，null可以赋值给任何一个reference
+这个reference不指向任何object
+
+null占空间吗？ 不是null占空间，而是存放null的refernence占空间
+
+current 是一个reference 
+null是一个special value for这个reference
+
+ current.next = null
+ current.next = current.next.next 
+                            ↑这个点发生NPE 的dereference null
+                       ↑这个点不发生NPE，因为只是读null。读null和写入null都不发生
+
+ //这一句产生3次dereference 发生NPE（NullPointerException），等号右边的两个操作结束了就没了，左边不执行
