@@ -1,1 +1,45 @@
 
+//一个完整的Partition过程
+private int partition(int[] array, int leftside, int rightside){
+	
+//这里input什么？？
+//right是需要partition范围的右边界index，left是范围左边界index
+
+pivot = rightside;
+left = leftside
+right = rightside -1;
+
+//设定左右2块挡板i,j
+i = left;
+j = right;
+
+//移动挡板的过程
+
+while(j >= i){      //为什么有"等于" 因为当前这个index=i=j处还未探索
+   if(array[i] < array[pivot]){
+    i++;
+   }
+   if(array[j] >= array[pivot]){
+   j--;
+   }
+   if(array[i] > array[pivot] && array[j] < array[pivot]){
+      swap(array, i, j);
+   }
+	
+}
+
+//跳出循环，得到挡板位置
+
+swap(array, i, pivot);
+return i;
+
+}
+
+
+}
+
+private void swap(int[] array,int left,int right){
+	int temp = array[left];
+	array[left] = array[right];
+	array[right] = temp;
+
