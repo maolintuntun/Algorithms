@@ -1,0 +1,8 @@
+二分查找有两种做法。
+1.while loop
+2.递归recursion
+
+我们需要遵循假设的一个法则：如果target存在，则一定位于left和right两块挡板之间。 两块挡板的初始位置分别设在0 和 array.length-1
+
+while循环结束的条件：挡板之间的范围为空集。相当于 left跑到右边去了。 具体的过程参见草稿纸
+ while( left <= right ). =也包括是因为=的位置上的那个数字还没有试过。
