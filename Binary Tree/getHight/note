@@ -1,1 +1,9 @@
+Sub problem: get height for the left subtree/right subtree
+Rule: 1 + Math.max(left sub, right sub)
+Base: null node's Height is 0.
 
+Time = O(n) 还要走下面的null，其实是接近2n，因为null的node的个数大约与总个数一样
+Space = 1.Heap上 无
+        2.Stack上 与recursion tree的高度成正比 = binary tree的高度
+           O(h) = 1.Average O(logn)
+                  2.Worst   O(n)
