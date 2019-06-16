@@ -1,5 +1,6 @@
 package twistedisidentical;
-
+// Time: n^2 非常重要 参见草稿纸
+//Space: h
 class isIdentical {
 	public boolean isIdentical(TreeNode a, TreeNode b){
 		if(a == null && b == null){
