@@ -6,3 +6,23 @@
 
 while循环结束的条件：挡板之间的范围为空集。相当于 left跑到右边去了。 具体的过程参见草稿纸
  while( left <= right ). =也包括是因为=的位置上的那个数字还没有试过。
+ 
+ 
+
+0.General binary search,find the target locates in an array.
+
+1.Apply binary search in 2D matrix,find the target locates within the matrix
+
+2.Find an element that is closest to the target number.
+
+5. Find the closest k elements in an array that is closest to a target number.
+
+3.Return the index of the first occurrence of an element
+
+4.Return the last occurrence of an element
+
+6. Find the smallest element that is larger than a target.
+
+7.Array 1 3 7 23 57... 100 99 86 44 32 21,find the largest element in the array
+
+8.Given a sorted dictionary with unknown size,how to determine whether a word is in this dictionary or not.
